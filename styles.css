@@ -1,0 +1,213 @@
+/* Base styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll bar */
+
+}
+
+header,
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    background: linear-gradient(to right, rgba(100, 50, 30, 0.7), rgba(150, 100, 50, 0.7));
+
+
+    width: 100%;
+    min-height: 100vh;
+    /* Each section takes at least full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#section1 {
+    background-color: #f1f1f1;
+    
+}
+
+#section1 .content {
+    text-align: center;
+}
+
+#section1 .explore-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#section1 .explore-btn:hover {
+    background-color: #0056b3;
+}
+
+#section2 {
+    background-color: #e1e1e1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    /* Ensure the images maintain their aspect ratio */
+    border-radius: 5px;
+}
+
+#section3 {
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.side-by-side img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border: 3px solid slateblue;
+    border-radius: 50%;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.2em;
+}
+
+.image-text-below {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-text {
+    text-align: center;
+    flex: 1;
+    /* Ensure that the text container takes available space */
+    max-width: 45%;
+    /* Limit the width of each container */
+}
+
+.image-text img {
+    width: 10.625rem;
+    /* Ensure the image takes full width of the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    border: 3px solid slateblue;
+    border-radius: 50%;
+}
+
+.image-text h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        /* Adjust for number of cards */
+    }
+
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .side-by-side img,
+    .text-content {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .image-text-below {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-text {
+        margin-bottom: 20px;
+        max-width: 100%;
+        /* Make sure it adjusts to full width in smaller screens */
+    }
+
+}
+
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+        /* Adjust for number of cards */
+    }
+
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .side-by-side img,
+    .text-content {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .image-text-below {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-text {
+        margin-bottom: 20px;
+        max-width: 100%;
+        /* Make sure it adjusts to full width in smaller screens */
+    }
+}
