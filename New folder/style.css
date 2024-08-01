@@ -1,0 +1,77 @@
+body{
+    background-color: coral;
+}
+.benefits-section {
+    text-align: center;
+}
+
+.benefits-header p {
+    font-size: 1.5rem;
+    color: #ffffff; /* Adjust color as needed */
+    
+}
+
+.benefits-header h1 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Adjust color as needed */
+}
+
+.benefits-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between rows */
+    padding: 25px 50px 75px 100px;
+    margin-right: 25px;
+
+}
+
+.benefit-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    flex: 1;
+    max-width: 300px; /* Adjust based on your design */
+    box-sizing: border-box;
+}
+
+.benefit-image {
+    position: relative;
+}
+
+.benefit-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
+}
+
+.image-button {
+    position: absolute;
+    bottom: -15px;
+    right: -35px;
+    background-color: rgb(230, 83, 60); /* Button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+
+.benefit-text {
+    max-width: 500px; /* Adjust based on your design */
+}
+
+.benefit-text p {
+    font-size: 1rem;
+    color: #ffffff; /* Adjust color as needed */
+    text-align: left;
+}
+.benefit-text h3 {
+    font-size: 1rem;
+    color: #ffffff; /* Adjust color as needed */
+    text-align: left;
+}
